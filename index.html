@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Learning</title>
+    <style>
+        .container,
+        .firstContainer {
+            border: 2px solid red;
+            margin: 3px 0;
+            background-color: royalblue;
+            padding: 3%;
+        }
+        
+        .bg-primary {
+            background-color: blueviolet;
+        }
+        
+        .txt-success {
+            color: chartreuse;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Welcome Lets start !</h1>
+    <div id="firstContainer" class="container">
+        <button id="click" onclick="clicked()">Click ME</button>
+        <h1>Button conatiner</h1>
+    </div>
+    <div class="container">
+        <p id="para">Hello this is for testing purposes</p>
+    </div>
+
+    <script src="test.js"></script>
+    <script>
+        // Ways to print in JS:
+        // console.log("Hello World")
+        // alert("me");
+        // document.write("this is document write")
+
+        // JS console API:
+        // console.log("Hello this is in console")
+        // alert("me")
+        // console.warn("this is a warning in console")
+        // console.error("this is an error displayed on console")
+
+
+        // JavaScript Variables
+        //Containers to store data values
+        // var num1 = 34
+        // var num2 = 53
+        // console.log(num1 + num2)
+        //var str1 = "hello string"
+        // var marks = {
+        //     ravi: 34,
+        //     shubham: 78,
+        //     harry: 99.9
+        // }
+        // console.log(marks)
+        //     //Booleans
+        // var a = true;
+        // var b = false;
+        // var c;
+        // console.log(c)
+
+        //there are two types of datatype in JS
+        // 1.Primitive Datatype - undefined, number, null, string, boolean, symbol
+        // 2.Reference Datatype - Arrays and Objects
+        // var arr = [1, 2, 4 - 1, 4, 5]
+        // console.log(arr[2], 4 - 1)
+
+        //Operators in JS
+
+        // var ab = 54
+        // var b = 123
+        // console.log("this is value = ", ab * b + 3 + b)
+        // ab += ab;
+        // console.log(ab)
+
+        // Comparison Operators
+        // ==,>=,<=,<,>
+
+        //Logical operators && and || and !
+
+        // console.log(true || true, false && true)
+        // console.log(true || true, false && true)
+        // console.log(true || true, false && true)
+
+        // console.log(!true)
+
+        //Functions -
+
+        //DRY - Do not Repeat Yourself
+        // function avg(a, b) {
+        //     return (a + b) / 2
+        // }
+        // var c1 = avg(4.1, 6)
+        // var c2 = avg(14, 6)
+        // console.log(c1, c2)
+        // var age = 3
+        // if (age > 5) {
+        //     console.log("You are not a kid")
+        // } else {
+        //     console.log("You are a kid")
+        // }
+
+        // age = 44;
+        // checker(age)
+
+        // function checker(age) {
+        //     if (age < 18) {
+        //         console.log("You are still a kid")
+        //     } else if (age > 18 && age < 60) {
+        //         console.log("You are still young")
+        //     } else {
+        //         console.log("You are old now")
+        //     }
+        // }
+        // age = 8
+        // checker(age)
+
+
+
+        //loops in JS
+        var arr = [1, 2, 3, 4, 5, 6, 7]
+            // //using for loop
+            // for (var i = 0; i < arr.length; i++) {
+            //     console.log(arr[i])
+            // }
+            // using for-each loop
+            // arr.forEach(function(element) {
+            //     console.log(element);
+            // })
+
+        let j = 0;
+        //let has a scope within the block in which it is used
+        // // const a = 0;
+        // while (j < arr.length) {
+        //     console.log(arr[j])
+        //     j++;
+        // }
+
+        // do {
+        //     console.log(arr[j])
+        //     j++;
+        // } while (j < arr.length)
+
+        // we also have break; for conditional termination
+
+        //continue statement
+        // for (var i = 0; i < arr.length; i++) {
+
+        //     if (arr[i] == 2) {
+        //         continue;
+        //     }
+        //     console.log(arr[i])
+        // }
+
+
+        //methods of arrays
+
+        let myarr = ["PC", "doc", true, 3, 25, null]
+            // console.log(myarr.length)
+            // console.log(myarr.pop) - removes the element from the last of the array
+            // console.log(myarr.length)
+            // myarr.push("hey") - add the given element at the last of the array
+            // myarr.shift() - removes the first element
+            // console.log(myarr)
+            // 
+            //Note - whenever we are using any update command we cannot use console.log at the same time to display on the same statement
+
+        // const newLen = myarr.unshift("avijeet")
+        // console.log(newLen)
+        // console.log(myarr)
+        //unshift is used to add an element to an array at the beginning and if we use console log with that it will return the length of the new array.
+        // myarr.sort()
+        // console.log(myarr)
+
+        // find the index of an item in the array 
+        // // console.log(myarr.indexOf(25))
+        // let pos = 1
+        // let n = 2
+
+        // let removedItems = myarr.splice(pos, n)
+        //     // this is how to remove items, n defines the number of items to be removed,
+        //     // starting at the index position specified by pos and progressing toward the end of array.
+        //     // console.log(removedItems)
+        //     // console.log(myarr)
+        let numcheck = [1, 2, 4, 5, 1]
+            // console.log(numcheck[2] == numcheck[02])
+
+        // let a = Object.keys(numcheck) --returns the keys of the elements in array in the form a new array 
+        // if (a.length < 6) {
+        //     console.log("Code working")
+        // }
+
+        //creating an array using the result of a match
+
+        // const myRe = /d(b+)(d)/i
+        // const myArray = myRe.exec('cdbBbdbdbdbbddz')
+        // console.log(myArray)
+
+        //Array.isArray()
+        // Returns true if value is an array, or false otherwise
+
+        // console.log(myarr.prototype.length) - reflects the number of elements in array
+
+        // myarr.prototype.concat() - Returns a new array that is this array joined with other array(s) and/or value(s).
+
+        // console.log(myarr.entries)
+
+        //The every() method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.
+        // const isBelowThreshold = (currentValue) => currentValue < 40;
+        // const array1 = [1, 30, 39, 29, 10, 13];
+        // console.log(array1.every(isBelowThreshold));
+
+
+
+        // //The filter() method creates a new array with all elements that pass the test implemented by the provided function.
+        // const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+        // const result = words.filter(word => word.length > 6);
+        // console.log(result);
+        // expected output: Array ["exuberant", "destruction", "present"]
+
+
+        // // The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.
+        // const array1 = [1, 4, 9, 16];
+
+        // // pass a function to map
+        // const map1 = array1.map(x => x * 7);
+
+        // console.log(map1);
+        // expected output: Array [2, 8, 18, 32]
+
+        // //using array to tabulate a set of values
+        // values = []
+        // for (let x = 0; x < 10; x++) {
+        //     values.push([
+        //         2 ** x,
+        //         2 * x ** 2
+        //     ])
+        // }
+        // console.table(values)
+        // console.log(values)
+
+
+
+        //string methods in JS
+        let mystring = "Hello World"
+            // console.log(mystring.length)
+            // console.log(mystring.indexOf("o"))
+
+        // console.log(mystring.slice(0, 2))
+        // console.log(mystring.replace("Hell", "Bel"))
+    </script>
+</body>
+
+</html>
